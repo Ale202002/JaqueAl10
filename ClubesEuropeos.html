@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaqueAL10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <section id="inicio">
+        <div class="envio-banner">
+            <p>Envíos gratis a partir de $40000 en compras</p>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Lupa -->
+            <div class="search-icon" onclick="openModal()">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="../LandingPrincipal/assets/LogoJaqueAl10.png" alt="Logo de JAQUE AL 10">
+            </div>
+
+            <!-- Carrito de compras -->
+            <div class="cart-icon" onclick="openCartModal()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal de Búsqueda -->
+    <div class="modal" id="searchModal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h2>Buscar</h2>
+            <input type="text" placeholder="Escribe aquí...">
+            <button class="close-btn" onclick="closeModal(event)">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal" id="cartModal" onclick="closeCartModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h2>Carrito de Compras</h2>
+            <p>Tu carrito está vacío.</p>
+            <button class="close-btn" onclick="closeCartModal(event)">Cerrar</button>
+        </div>
+    </div>
+
+
+    <!-- Botones de Menú y Productos -->
+    <div class="menu-container">
+        <!-- Botón Menú con Menú Desplegable -->
+        <div class="dropdown">
+            <button class="dropdown-button">
+                Menú <i class="fas fa-chevron-down"></i>
+            </button>
+            <!-- Menú desplegable -->
+            <div class="dropdown-content">
+                <a href="../LandingPrincipal/index.html">Inicio</a>
+                <a href="../LandingPrincipal/PoliticasDeEnvioYDevoluciones.html">Políticas de envío y devoluciones</a>
+                <a href="../LandingPrincipal/index.html#contacto">Contacto</a>
+            </div>
+        </div>
+
+        <!-- Botón Productos con Menú Desplegable -->
+        <div class="dropdown">
+            <button class="dropdown-button">
+                Productos <i class="fas fa-chevron-down"></i>
+            </button>
+            <!-- Menú desplegable -->
+            <div class="dropdown-content">
+                <a href="../LandingPrincipal/ClubesArgentinos.html">Clubes Argentinos</a>
+                <a href="../LandingPrincipal/ClubesEuropeos.html">Clubes Europeos</a>
+                <a href="../LandingPrincipal/SeleccionArgentina.html">Seleccion Argentina</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="camisetas-galeria">
+        <h2>Clubes Europeos</h2>
+        <div class="galeria">
+            <div class="item">
+                <img src="../LandingPrincipal/assets/ClubesEuropeos/RManchesterCityEtihad.png" alt="ManchesterCity">
+                <p>Camiseta Titular Temporada 2022 (ETIHAD AirWays) - ManchesterCity</p>
+                <p class="precio">$40.000</p>
+
+                <label for="talle">Talle:</label>
+                <select class="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+            </div>
+            <button class="agregar-carrito">Agregar al carrito</button>
+            <div class="item">
+                <img src="../LandingPrincipal/assets/ClubesEuropeos/RvBarcelonaKappa.png" alt="RvBarcelonaKappa">
+                <p>Camiseta Vintage 1997-1998 (Kappa) - FCBarcelona</p>
+                <p class="precio">$60.000</p>
+
+                <label for="talle">Talle:</label>
+                <select class="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+            </div>
+            <button class="agregar-carrito">Agregar al carrito</button>
+            <div class="item">
+                <img src="../LandingPrincipal/assets/ClubesEuropeos/RvRealMadridBwin.png" alt="RvRealMadridBwin">
+                <p>Camiseta Vintage 2011-2012 (Bwin) - RealMadrid</p>
+                <p class="precio">$50.000</p>
+
+                <label for="talle">Talle:</label>
+                <select class="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+            </div>
+            <button class="agregar-carrito">Agregar al carrito</button>
+            <div class="item">
+                <img src="../LandingPrincipal/assets/ClubesEuropeos/RvManchesterCityKappa.png"
+                    alt="RvManchesterCityKappa">
+                <p>Camiseta Vintage 1997 (Kappa) - ManchesterCity</p>
+                <p class="precio">$80.000</p>
+
+                <label for="talle">Talle:</label>
+                <select class="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                
+            </div>
+            <button class="agregar-carrito">Agregar al carrito</button>
+
+
+            <script src="../LandingPrincipal/script.js"></script>
+
+</body>
+
+</html>

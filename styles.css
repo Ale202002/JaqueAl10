@@ -1,0 +1,504 @@
+.envio-banner {
+    background-color: #3F4A60; /* Fondo azul */
+    font-family: "Bebas Neue";
+    color: white; /* Texto blanco */
+    overflow: hidden; /* Oculta el texto que sale del contenedor */
+    position: relative; /* Para posicionar el texto */
+    height: 50px; /* Ajusta la altura del contenedor */
+    padding: 10px 0; /* Espaciado interno vertical */
+    display: flex; /* Activar Flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.envio-banner p {
+    position: absolute;
+    white-space: nowrap; /* Evita que el texto se quiebre */
+    animation: scroll-banner 10s linear infinite; /* Animación continua */
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 40px; /* Centra verticalmente dentro del banner */
+    padding: 0; /* Elimina cualquier espacio adicional */
+    top: 0; /* Ajusta la posición si necesitas más precisión */
+}
+
+/* Animación del texto */
+@keyframes scroll-banner {
+    0% {
+        transform: translateX(100%); /* Empieza fuera del contenedor (derecha) */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fuera del contenedor (izquierda) */
+    }
+}
+
+/* Estilo básico para el header */
+header {
+    background-color: #3F4A60; /* Fondo blanco, puedes cambiarlo según prefieras */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para darle profundidad */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Ajusta según el diseño */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilo para la lupa */
+.search-icon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.search-icon i {
+    font-size: 24px;
+    color: #ffffff; /* Cambia el color si prefieres otro tono */
+    cursor: pointer;
+}
+
+/* Estilo para el logo */
+.logo {
+    flex: 2;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+/* Estilo para el carrito */
+.cart-icon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.cart-icon i {
+    font-size: 24px;
+    color: #ffffff; /* Cambia el color si prefieres otro tono */
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+/* Estilos para el modal de búsqueda */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Añadido para centrar el modal */
+    background: rgba(0, 0, 0, 0.5);  /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que el modal se muestre encima */
+}
+
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    z-index: 999; /* Asegura que el fondo esté detrás del modal */
+    display: none; /* Oculto por defecto */
+    overflow-y: auto; /* Permite el desplazamiento del fondo si es necesario */
+}
+
+.modal-content {
+    font-family: "montserrat";
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh; /* Limita la altura del modal */
+    overflow-y: auto; /* Permite desplazamiento si el contenido excede el tamaño */
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal-content input {
+    font-family: "montserrat";
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#cartMessage {
+    font-size: 16px;
+    color: #777;
+}
+
+#cartItems {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: "montserrat";
+    background-color: #c9302c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.close-btn {
+    font-family: "montserrat";
+    background: #c9302c;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.close-btn:hover {
+    background: #c9302c;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
+
+/* Contenedor de los botones */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Separación entre los botones */
+    background-color: #3F4A60;
+    padding: 15px 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Estilo de los botones */
+.menu-button,
+.dropdown-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-button:hover,
+.dropdown-button:hover {
+    background-color: white;
+    color: #3F4A60;
+}
+
+/* Dropdown (Menú desplegable) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #3F4A60;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 150px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #3F4A60;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar el menú desplegable al pasar el cursor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo general para la sección de portada */
+.portada-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F4A60; /* Fondo azul */
+    padding: 20px;
+}
+
+/* Imagen de la portada */
+.portada-imagen img {
+    width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    max-width: 1200px; /* Tamaño máximo para pantallas grandes */
+    height: auto; /* Mantiene proporción */
+    border-radius: 10px; /* Esquinas redondeadas para un toque moderno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/*Galeria de camisetas*/
+.camisetas-galeria {
+    padding: 30px;
+    background-color: #3F4A60;
+  }
+  
+  .camisetas-galeria h2 {
+    font-family: "Bebas Neue";
+    text-align: center;
+    color: #d4af37;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .galeria {
+    font-family: "montserrat";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .item {
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .item p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+  }
+
+  .precio {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin: 10px 0;
+  }
+
+  .talle {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    margin: 10px 0;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    background: #f8f8f8;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.talle:hover {
+    background: #e6f0ff;
+}
+  
+  .agregar-carrito {
+    font-family: "montserrat";
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .agregar-carrito:hover {
+    background-color: #2980b9;
+  }
+
+  .item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .item img {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .item:hover img {
+    opacity: 0.8;
+  }
+
+
+  /* Estilo para la sección de Política de Envíos y Devoluciones */
+.politicas-section {
+    background-color: #3F4A60;
+    color: white;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.politicas-section h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #d4af37; /* Dorado */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.politicas-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #d4af37; /* Dorado */
+    font-size: 1.8rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.politicas-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.politicas-section .section-title {
+    font-weight: bold;
+    color: #d4af37; /* Dorado */
+}
+
+/* Enlaces dentro de la sección */
+.politicas-section a {
+    color: #d4af37; /* Dorado */
+    text-decoration: none;
+}
+
+.politicas-section a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para la sección de Contacto */
+.contacto-section {
+    background-color: #3F4A60;
+    color: white;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.contacto-section h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #d4af37; /* Dorado */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contacto-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Estilo para la sección de Redes Sociales (Instagram) */
+.redes-sociales-section {
+    background-color: #3F4A60;
+    color: white;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.redes-sociales-section h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #d4af37; /* Dorado */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.redes-sociales-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.instagram-link {
+    color: #d4af37; /* Dorado */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.instagram-link:hover {
+    text-decoration: underline;
+}
+
+
+/*Estilo para el footer*/
+
+footer {
+    background-color: #3F4A60; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    text-align: center; /* Centrar texto */
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px auto; /* Centrado y pequeño espacio alrededor */
+    max-width: 1200px; /* Para que no se estire mucho */
+}
+
+footer p {
+    font-size: 14px;
+}

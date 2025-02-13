@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaqueAL10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <section id="inicio">
+        <div class="envio-banner">
+            <p>Envíos gratis a partir de $40000 en compras</p>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Lupa -->
+            <div class="search-icon" onclick="openModal()">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="../LandingPrincipal/assets/LogoJaqueAl10.png" alt="Logo de JAQUE AL 10">
+            </div>
+
+            <!-- Carrito de compras -->
+            <div class="cart-icon" onclick="openCartModal()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal de Búsqueda -->
+    <div class="modal" id="searchModal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h2>Buscar</h2>
+            <input type="text" placeholder="Escribe aquí...">
+            <button class="close-btn" onclick="closeModal(event)">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal" id="cartModal" onclick="closeCartModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h2>Carrito de Compras</h2>
+            <p>Tu carrito está vacío.</p>
+            <button class="close-btn" onclick="closeCartModal(event)">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Botones de Menú y Productos -->
+    <div class="menu-container">
+        <!-- Botón Menú con Menú Desplegable -->
+        <div class="dropdown">
+            <button class="dropdown-button">
+                Menú <i class="fas fa-chevron-down"></i>
+            </button>
+            <!-- Menú desplegable -->
+            <div class="dropdown-content">
+                <a href="../LandingPrincipal/index.html">Inicio</a>
+                <a href="../LandingPrincipal/PoliticasDeEnvioYDevoluciones.html">Políticas de envío y devoluciones</a>
+                <a href="../LandingPrincipal/index.html#contacto">Contacto</a>
+            </div>
+        </div>
+
+        <!-- Botón Productos con Menú Desplegable -->
+        <div class="dropdown">
+            <button class="dropdown-button">
+                Productos <i class="fas fa-chevron-down"></i>
+            </button>
+            <!-- Menú desplegable -->
+            <div class="dropdown-content">
+                <a href="../LandingPrincipal/ClubesArgentinos.html">Clubes Argentinos</a>
+                <a href="../LandingPrincipal/ClubesEuropeos.html">Clubes Europeos</a>
+                <a href="../LandingPrincipal/SeleccionArgentina.html">Seleccion Argentina</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Política de Envíos y Devoluciones -->
+    <section id="politicas" class="politicas-section">
+        <h1>Política de Envíos y Devoluciones</h1>
+
+        <h2>Envíos</h2>
+        <p><span class="section-title">Tiempo de procesamiento:</span> Los pedidos se preparan en un plazo de 1 a 3 días hábiles.</p>
+        <p><span class="section-title">Tiempo de entrega:</span> La entrega varía según la ubicación y la empresa de mensajería, con un estimado de 1 a 3 días hábiles.</p>
+        <p><span class="section-title">Costo de envío:</span> Se calculará al finalizar la compra según el destino y la opción de envío elegida.</p>
+        <p><span class="section-title">Seguimiento:</span> Una vez enviado el pedido, recibirás un número de seguimiento para monitorear tu paquete en todo momento.</p>
+
+        <h2>Devoluciones y Reembolsos</h2>
+        <p><span class="section-title">Plazo para devoluciones:</span> Puedes solicitar una devolución dentro de los 3 días posteriores a la recepción del producto.</p>
+        <p><span class="section-title">Condiciones:</span> La camiseta debe estar sin usar, sin lavar, con etiquetas y en su empaque original.</p>
+        <p><span class="section-title">Proceso de devolución:</span> Para iniciar una devolución, contáctanos a <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a> con tu número de pedido y motivo de la devolución.</p>
+        <p><span class="section-title">Reembolsos:</span> Una vez recibida y aprobada la devolución, procesaremos el reembolso en un plazo de 3 días hábiles.</p>
+
+        <h2>Excepciones</h2>
+        <p><span class="section-title">Cambio de talla:</span> No se aceptan devoluciones por cambios de talla si la guía de tallas fue proporcionada al momento de la compra.</p>
+        <p><span class="section-title">Producto dañado:</span> Si el producto llega dañado o con un error de fabrica, contáctanos dentro de las primeras 48 horas tras la recepción.</p>
+
+        <h2>Contacto</h2>
+        <p>Para cualquier consulta sobre envíos o devoluciones, escríbenos a <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a> o llámanos al [número de teléfono].</p>
+    </section>
+
+    <script src="../LandingPrincipal/script.js"></script>
+
+</body>
+
+</html>
